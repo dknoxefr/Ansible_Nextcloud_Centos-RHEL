@@ -1,4 +1,4 @@
 ---
 # vars file for nextcloud
-mysql_root_password: "TheSecretRootP@$$"
-mysql_admin_password: "SuperSecret@dmin"
+mysql_root_password: "RootPassword_Here"
+mysql_admin_password: "AdminPassword_Here"
