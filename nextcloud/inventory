@@ -1,7 +1,0 @@
-[lab-servers]
-AnsLab2 ansible_user=root
-
-
-[cloud-server]
-
-
