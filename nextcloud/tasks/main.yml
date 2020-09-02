@@ -1,0 +1,7 @@
+---
+# tasks file for nextcloud
+
+- import_tasks: setup.yml
+- import_tasks: sqlsetup.yml
+- import_tasks: configure.yml
+- import_tasks: firewall.yml

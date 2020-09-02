@@ -1,0 +1,28 @@
+---
+#update server and install needed files
+- name: update system
+  yum: name=* state=latest
+- name: Installing packages
+  yum:
+    name:
+      - wget
+      - curl
+      - tar
+      - unzip
+      - httpd
+      - mariadb
+      - mariadb-server
+      - python3-PyMySQL
+      - nano
+      - php-mysqlnd
+      - php-fpm
+      - php-json
+      - php-xml
+      - php-zip
+      - php-curl
+      - php-gd
+      - php-intl
+      - php-ldap
+      - php-mbstring
+      - php-opcache
+    state: latest

@@ -1,0 +1,24 @@
+---
+# Configure Wordpress
+
+- name: Download Wordpress and unzip it
+  unarchive:
+    src: https://download.nextcloud.com/server/releases/nextcloud-19.0.2.zip
+    dest: /var/www/html/
+    remote_src: yes
+
+- name: nextcloud data folder
+  file:
+    path: /var/www/html/nextcloud/data
+    state: directory
+    mode: '0755'
+
+- name: Recursively change ownership nextcloud directory
+  file:
+    path: /var/www/html/nextcloud/
+    state: directory
+    recurse: yes
+    owner: apache
+    group: apache
+  notify:
+  - restart apache
